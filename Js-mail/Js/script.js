@@ -7,6 +7,8 @@ const email = ['Naruto@gmail.com', 'Levi@libero.it', 'RoronoaZoro@hotmail.it'];
 const user_mail = prompt('Enter your email');
 //console.log(user_mail);
 
+let find = false
+
 // Creo un ciclo per elencare la lista
 for (let i = 0; i < email.length; i++) {
     const element = email[i];
@@ -14,12 +16,16 @@ for (let i = 0; i < email.length; i++) {
     
     // Se la mail dell'utente è presente nel ciclo, stampo il messaggio 'Access Allowed'
      if (user_mail == element) {
-         console.log('Access Allowed');
+         find = true;
 
          // Altrimenti stampo il messaggio 'Access Denied' 
-     } else {
-         console.log('Access Denied');
      }
+}
+
+if (find == true) {
+    console.log('Access Allowed');
+} else {
+    console.log('Access Denied');
 }
 
 
